@@ -2,7 +2,7 @@
 
 namespace App\Patterns\Behavior\ChainOfReponsability;
 
-class AcaoCalcularDesconto extends Handler
+class AdicionarDesconto extends Handler
 {
     /**
      * @param $value
@@ -10,13 +10,9 @@ class AcaoCalcularDesconto extends Handler
      */
     public function handle($value): mixed
     {
-
         if ($value > 100){
-            echo 'desconta do 10% de juros ao valor';
             $value -= $value*0.1;
         }
         return parent::handle($value);
-
     }
-
 }

@@ -4,7 +4,7 @@ namespace App\Patterns\Behavior\ChainOfReponsability;
 
 use App\Patterns\Behavior\ChainOfReponsability\Interface\HandlerInterface;
 
-class Handler implements HandlerInterface
+abstract class Handler implements HandlerInterface
 {
 
     private ?HandlerInterface $next = null;
@@ -15,6 +15,7 @@ class Handler implements HandlerInterface
      */
     public function handle($value): mixed
     {
+        dump($value);
         return $this->next?->handle($value);
     }
 

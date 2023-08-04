@@ -4,7 +4,7 @@ namespace App\Patterns\Behavior\ChainOfReponsability;
 
 use App\Patterns\Behavior\ChainOfReponsability\Interface\HandlerInterface;
 
-class AcaoAdicionarJuros extends Handler
+class AdicionarJuros extends Handler
 {
     /**
      * @param $value
@@ -14,9 +14,10 @@ class AcaoAdicionarJuros extends Handler
     {
         // Implementação da lógica que chama o handler
         if ($value > 20){
-            print 'adiciona do 5 de juros ao valor';
-            return $value +=5;
+            print 'adiciona ao valor por 5 de juros';
+            $value +=5;
         }
+        dump($value);
         return parent::handle($value);
     }
 

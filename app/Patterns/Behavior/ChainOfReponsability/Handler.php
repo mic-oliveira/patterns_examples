@@ -15,7 +15,6 @@ abstract class Handler implements HandlerInterface
      */
     public function handle($value): mixed
     {
-        dump($value);
         return $this->next?->handle($value);
     }
 

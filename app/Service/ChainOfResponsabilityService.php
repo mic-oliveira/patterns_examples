@@ -17,7 +17,6 @@ class ChainOfResponsabilityService
     {
         $juros = new AdicionarJuros();
         $desconto = new AdicionarDesconto();
-        dump($juros->next($desconto)->handle($value));
         return $juros->next($desconto)->handle($value);
     }
 }

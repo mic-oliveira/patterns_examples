@@ -17,7 +17,6 @@ class AdicionarJuros extends Handler
             print 'adiciona ao valor por 5 de juros';
             $value +=5;
         }
-        dump($value);
         return parent::handle($value);
     }
 

@@ -2,22 +2,23 @@
 
 namespace App\Patterns\Behavior\ChainOfReponsability;
 
-use App\Patterns\Behavior\ChainOfReponsability\Interface\HandlerInterface;
+use App\Models\Boleto;
 
 class AdicionarJuros extends Handler
 {
     /**
-     * @param $value
-     * @return mixed
+     * @param Boleto $boleto
+     * @return void
      */
-    public function handle($value): mixed
+    public function handle(Boleto $boleto): void
     {
         // Implementação da lógica que chama o handler
-        if ($value > 20){
-            print 'adiciona ao valor por 5 de juros';
-            $value +=5;
+        if ($boleto->vencimento->endOfDay()->lessThan(now())){
+            // aqui entra as regras e somtários usadas para o totalizados de juros
+            $boleto->juros = 5000;
         }
-        return parent::handle($value);
+        parent::handle($boleto);
+
     }
 
 }

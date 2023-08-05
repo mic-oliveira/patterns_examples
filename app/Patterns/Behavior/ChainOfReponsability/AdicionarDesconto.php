@@ -2,17 +2,21 @@
 
 namespace App\Patterns\Behavior\ChainOfReponsability;
 
+use App\Models\Boleto;
+
 class AdicionarDesconto extends Handler
 {
     /**
-     * @param $value
-     * @return mixed
+     * @param Boleto $boleto
+     * @return void
      */
-    public function handle($value): mixed
+    public function handle(Boleto $boleto): void
     {
-        if ($value > 100){
-            $value -= $value*0.1;
+        // calculo de data feitos através do Carbon, verificando se a data hoje é maior do que a data de vencimento
+        if ($boleto->vencimento->endOfDay()->greaterThanOrEqualTo(now())){
+            // adiciona o campo de descontos e etc
+            $boleto->descontos = 2100;
         }
-        return parent::handle($value);
+        parent::handle($boleto);
     }
 }

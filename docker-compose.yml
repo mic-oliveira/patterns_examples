@@ -3,6 +3,8 @@ services:
   app:
     image: aronpc/php:8.2-nginx
     working_dir: /app
+    environment:
+      XDEBUG_MODE: coverage
     ports:
       - '${APP_PORT:-8080}:8080'
     volumes:

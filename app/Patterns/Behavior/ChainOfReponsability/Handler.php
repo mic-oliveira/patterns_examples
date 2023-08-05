@@ -2,6 +2,7 @@
 
 namespace App\Patterns\Behavior\ChainOfReponsability;
 
+use App\Models\Boleto;
 use App\Patterns\Behavior\ChainOfReponsability\Interface\HandlerInterface;
 
 abstract class Handler implements HandlerInterface
@@ -10,12 +11,12 @@ abstract class Handler implements HandlerInterface
     private ?HandlerInterface $next = null;
 
     /**
-     * @param $value
-     * @return mixed
+     * @param Boleto $boleto
+     * @return void
      */
-    public function handle($value): mixed
+    public function handle(Boleto $boleto): void
     {
-        return $this->next?->handle($value);
+        $this->next?->handle($boleto);
     }
 
     public function next(HandlerInterface $handler): HandlerInterface

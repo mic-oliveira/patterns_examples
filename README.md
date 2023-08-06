@@ -9,3 +9,19 @@ possam ser utilizados!
 
 
 Também está sendo usado várias boas práticas e abordagens referente a projeto de software.
+
+
+### Como executar o projeto
+- Copie o arquivo env.example para .env.
+- Através do docker, use o comando: <br>
+``docker-compose up -d``
+- Após os comando para iniciar os container docker ser realizado, utilize o comando: <br>
+``docker-compose exec app composer install``<br>
+Ou apenas ``composer install``, caso tenha o PHP com composer instalado.
+
+### Como executar os testes
+Para a execuação dos testes pode-se usar o comando: <br>
+``docker-compose exec app ./vendor/bin/pest`` podendo também ser utilizado com
+o parâmetro ``--coverage`` para teste de cobertura.
+
+#### "Testar o software é como testar a resistência de uma ponte;quanto mais você testa, mais confiança tem de que ela não vai cair." - Scott Barber, especialista em testes de software.

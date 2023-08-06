@@ -24,4 +24,4 @@ Para a execuação dos testes pode-se usar o comando: <br>
 ``docker-compose exec app ./vendor/bin/pest`` podendo também ser utilizado com
 o parâmetro ``--coverage`` para teste de cobertura.
 
-#### "Testar o software é como testar a resistência de uma ponte;quanto mais você testa, mais confiança tem de que ela não vai cair." - Scott Barber, especialista em testes de software.
+#### “Descobrir o inesperado é mais importante do que confirmar o conhecido.” – Pranav D

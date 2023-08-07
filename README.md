@@ -4,7 +4,7 @@ a compreensão sobre a aplicação de padrões de projeto. Fique a vontade para 
 possam ser utilizados!
 
 ### Estruturais
-- Repository
+- Repository - testes OK
 
 ### Comportamentais
 - Chain of Responsability - testes OK

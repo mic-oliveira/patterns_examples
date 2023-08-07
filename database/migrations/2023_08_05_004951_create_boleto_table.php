@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('valor');
             $table->integer('juros')->nullable();
             $table->integer('descontos')->nullable();
+            $table->text('observacao')->nullable();
             $table->dateTime('vencimento');
             $table->timestamps();
         });
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('boleto-ms');
+        Schema::dropIfExists('boletos');
     }
 };

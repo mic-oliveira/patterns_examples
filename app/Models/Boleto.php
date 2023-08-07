@@ -11,7 +11,15 @@ class Boleto extends Model
 
     protected $table = 'boletos';
 
+    protected $fillable = [
+        'valor',
+        'juros',
+        'desconto',
+        'observacao',
+        'vencimento',
+    ];
+
     protected $casts = [
-        'vencimento' => 'datetime'
+        'vencimento' => 'datetime',
     ];
 }

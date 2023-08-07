@@ -3,13 +3,13 @@ Exemplos de referência simples utilizando contextos mais próximos da realidade
 a compreensão sobre a aplicação de padrões de projeto. Fique a vontade para contribuir e trazer mais casos de uso que
 possam ser utilizados!
 
-### Comportamentais
+### Estruturais
+- Repository - testes OK
 
+### Comportamentais
 - Chain of Responsability - testes OK
 
-
 Também está sendo usado várias boas práticas e abordagens referente a projeto de software.
-
 
 ### Como executar o projeto
 - Copie o arquivo env.example para .env.
